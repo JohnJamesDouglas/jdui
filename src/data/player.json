@@ -1,0 +1,163 @@
+{
+	"Info": {
+		"Player Name": "",
+		"Character Name": "",
+		"Class": "",
+		"Level": 1,
+		"Background": "",
+		"Race": "",
+		"Alignment": "",
+		"Experience Points": 0
+	},
+	"Attributes": {
+		"Strength": 0,
+		"Dexterity": 0,
+		"Constitution": 0,
+		"Intelligence": 0,
+		"Wisdom": 0,
+		"Charisma": 0
+	},
+	"Extra Modifiers": {
+		"Inspiration": 0,
+		"Proficiency Bonus": 2,
+		"Passive Wisdom": 0
+	},
+	"Hitpoints": {
+		"Current": 1,
+		"Max": 1,
+		"Temporary": 0
+	},
+	"Death Saves": {
+		"Successes": [
+			false,
+			false,
+			false
+		],
+		"Failures": [
+			false,
+			false,
+			false
+		]
+	},
+	"Skills": [
+		{
+			"Name": "Acrobatics",
+			"Bonus": 0,
+			"Attribute": "Dexterity",
+			"Proficient": false
+		},
+		{
+			"Name": "Animal Handling",
+			"Bonus": 0,
+			"Attribute": "Wisdom",
+			"Proficient": false
+		},
+		{
+			"Name": "Arcana",
+			"Bonus": 0,
+			"Attribute": "Intelligence",
+			"Proficient": false
+		},
+		{
+			"Name": "Athletics",
+			"Bonus": 0,
+			"Attribute": "Strength",
+			"Proficient": false
+		},
+		{
+			"Name": "Deception",
+			"Bonus": 0,
+			"Attribute": "Charisma",
+			"Proficient": false
+		},
+		{
+			"Name": "History",
+			"Bonus": 0,
+			"Attribute": "Intelligence",
+			"Proficient": false
+		},
+		{
+			"Name": "Insight",
+			"Bonus": 0,
+			"Attribute": "Wisdom",
+			"Proficient": false
+		},
+		{
+			"Name": "Intimidation",
+			"Bonus": 0,
+			"Attribute": "Charisma",
+			"Proficient": false
+		},
+		{
+			"Name": "Investigation",
+			"Bonus": 0,
+			"Attribute": "Intelligence",
+			"Proficient": false
+		},
+		{
+			"Name": "Medicine",
+			"Bonus": 0,
+			"Attribute": "Wisdom",
+			"Proficient": false
+		},
+		{
+			"Name": "Nature",
+			"Bonus": 0,
+			"Attribute": "Intelligence",
+			"Proficient": false
+		},
+		{
+			"Name": "Perception",
+			"Bonus": 0,
+			"Attribute": "Wisdom",
+			"Proficient": false
+		},
+		{
+			"Name": "Performance",
+			"Bonus": 0,
+			"Attribute": "Charisma",
+			"Proficient": false
+		},
+		{
+			"Name": "Persuasion",
+			"Bonus": 0,
+			"Attribute": "Charisma",
+			"Proficient": false
+		},
+		{
+			"Name": "Religion",
+			"Bonus": 0,
+			"Attribute": "Intelligence",
+			"Proficient": false
+		},
+		{
+			"Name": "Sleight Of Hand",
+			"Bonus": 0,
+			"Attribute": "Dexterity",
+			"Proficient": false
+		},
+		{
+			"Name": "Stealth",
+			"Bonus": 0,
+			"Attribute": "Dexterity",
+			"Proficient": false
+		},
+		{
+			"Name": "Survival",
+			"Bonus": 0,
+			"Attribute": "Wisdom",
+			"Proficient": false
+		}
+	],
+	"Money": {
+		"Copper": 0,
+		"Silver": 0,
+		"Electrum": 0,
+		"Gold": 0,
+		"Platinum": 0
+	},
+	"Equipment": "",
+	"Proficiences&Languages": "",
+	"Features&Traits": "",
+	"Initiative": 0
+}

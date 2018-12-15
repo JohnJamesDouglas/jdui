@@ -1,0 +1,102 @@
+@import '../../../css/variables.scss';
+
+.roller {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+	height: 100%;
+}
+
+.roller-num-dice {
+	display: flex;
+	width: 100%;
+	height:	6vh;
+
+	button {
+		height: 100%;
+	}
+
+	p {
+		width: 100%;
+		font-size: 5vh;
+		font-weight: bold;
+	}
+}
+
+.roller-wheel-num-dice {
+    display: flex;
+    flex: 1;
+}
+
+.roller-display {
+    display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	border-radius: 4px;
+	overflow: hidden;
+	justify-content: center;
+
+	button {
+		height:	6vh;
+		border-radius: 0;
+		width: 20%;
+
+		svg {
+			height: 100%;
+
+			& > * { 
+				stroke: #fff;
+			}
+
+			animation-name: spin;
+			animation-duration: 2000ms;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+	
+			@-moz-keyframes spin {
+				from { -moz-transform: rotate(0deg); }
+				to { -moz-transform: rotate(360deg); }
+			}
+			@-webkit-keyframes spin {
+				from { -webkit-transform: rotate(0deg); }
+				to { -webkit-transform: rotate(360deg); }
+			}
+			@keyframes spin {
+				from {transform:rotate(0deg);}
+				to {transform:rotate(360deg);}
+			}
+		}
+	}
+}
+
+.roller-output {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+	flex: 1;
+	border-radius: 4px;
+    cursor: pointer;
+    font-size: 2vh;
+}
+
+.roller-output-header {
+    flex: 1;
+}
+
+.selected-die {
+    background: $color-highlight;
+}
+
+.max-roll {
+    background: $color-highlight;
+}
+
+.previous-rolls {
+    display: flex;
+}
+
+.previous-roll, .previous-roll-max-roll, .previous-roll-num-dice {
+    text-align: center;
+    flex: 1;
+}

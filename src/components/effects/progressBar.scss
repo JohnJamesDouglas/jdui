@@ -1,0 +1,63 @@
+@import '../../css/variables.scss';
+
+.progress__bar {
+    position: relative;
+    width: 100%;
+	min-width: 200px;
+	min-height: 4vh;
+    height: 100%;
+    background: $progress-color-background;
+	border-radius: 4px;
+}
+
+.progress__bar--progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	height: 100%;
+	min-height: 4vh;
+    background-color: $progress-color;
+    border-radius: 4px 0 0 4px;
+}
+
+.progress__bar--capped {
+    border-radius: 4px;
+    background-color: $progress-color-capped;
+}
+
+.progress__bar--text {
+	position: absolute;
+	width: 75%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+	color: #fff;
+	text-align: center;
+}
+
+.temporary__bar {
+		position: absolute;
+		width: 100%;
+		min-width: 200px;
+		min-height: 1vh;
+		height: 1vh;
+		background: gray;
+		border-radius: 0 0 4px 4px;	
+		bottom: 0;
+}
+
+.temporary__bar--progress {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	height: 1vh;
+	min-height: 1vh;
+    background-color: $progress-color-temporary;
+    border-radius: 0 0 0 4px;
+}
+
+.temporary__bar--capped {
+    border-radius: 0 0 4px 4px;
+    background-color: $progress-color-temporary-capped;
+}

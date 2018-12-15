@@ -1,0 +1,28 @@
+@import './../../../css/variables.scss';
+
+.sheet {
+	padding: 0;
+	box-shadow: $shadow-section;
+
+    & > .row {
+        padding-bottom: 1vh;
+    }
+
+    & > .row:last-of-type {
+        padding-bottom: 0;
+	}
+	
+	.skills__container {
+		display: flex;
+
+		p {
+			width: 100%;
+		}
+
+		.checkbox {
+			position: relative;
+			top: 50%;
+			width: 2vh;
+		}
+	}
+}

@@ -1,0 +1,65 @@
+@import '../../../css/variables.scss';
+
+.accordionBody {}
+
+.accordionBody__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 1vh 1vw;
+	background: $color-primary;
+
+    & > p {
+        margin-right: 3vh;
+		padding-left: 0;
+	}
+	
+	.accordionBody__items {
+		display: flex;
+		align-items: center;
+
+		& > p:first-child {
+			margin-right: 2vh;
+		}
+		
+		& > p {
+			color: #fff;
+		}
+
+		& > div {
+			margin-right: 1vh;
+			display: flex;
+			align-items: center;
+			height: 100%;
+		}
+
+		& > svg {
+			height: 2vh;
+			margin-right: 1vh;
+		}
+    }
+}
+
+.accordionBody__header:hover {
+	background: darken($color-primary, 10%);
+}
+
+.accordionBody__body {
+	padding: 1vh 0;
+	background-color: #616161;
+	color: #fff;
+	box-shadow: $shadow-section-inset;
+
+	.row{
+		padding: 0 0 1vh 0;
+	}
+
+	.row:last-child {
+		padding: 0
+	}
+}
+
+.accordionBody__toggle {
+	color: #fff;
+}

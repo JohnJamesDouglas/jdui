@@ -1,0 +1,33 @@
+$placeholder-color: #b7b7b7;
+
+.textarea {
+    width: 100%;
+    margin: 0;
+    vertical-align: middle;
+	outline: none;
+	padding: 1vh;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 2vh;
+	min-height: 200px;
+}
+
+.textarea--resize {
+	resize: vertical;
+}
+
+textarea::-webkit-input-placeholder {
+	color: $placeholder-color;
+}
+
+textarea:-moz-placeholder { /* Firefox 18- */
+	color: $placeholder-color;  
+}
+
+textarea::-moz-placeholder {  /* Firefox 19+ */
+	color: $placeholder-color;  
+}
+
+textarea:-ms-input-placeholder {
+	color: $placeholder-color;  
+}

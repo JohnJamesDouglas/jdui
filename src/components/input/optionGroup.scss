@@ -1,0 +1,16 @@
+.optionGroup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: lightsteelblue;
+}
+
+.optionGroup.option-row {
+    flex-direction: row;
+}
+
+.optionGroup.option-column {
+    flex-direction: column;
+}

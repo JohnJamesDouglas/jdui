@@ -1,0 +1,11 @@
+.row {
+	width: 100%;
+}
+
+// clearfix hack
+.row:before, 
+.row:after {
+    content:"";
+    display: table;
+    clear:both;
+}

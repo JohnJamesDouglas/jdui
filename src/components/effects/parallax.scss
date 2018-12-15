@@ -1,0 +1,26 @@
+// .parallax {
+//     position: relative;
+//     height: 100%;
+//     width: 100%;
+//     background: yellow;
+//     background-attachment: fixed;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+// }
+
+.parallax {
+    height: 100%;
+    width: 100%;
+}
+
+.parallax-effect {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: green;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

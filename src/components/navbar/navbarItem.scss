@@ -1,0 +1,38 @@
+@import '../../css/variables.scss';
+
+.navbar__item {
+    display: flex;
+	align-items: center;
+	height: 100%;
+
+    a {
+        display: flex;
+		align-items: center;
+		height: 100%;
+		padding: 0 1vw;
+		color: $navbar-item-text-color;
+		text-decoration: none;
+	}
+	
+    svg {
+        display: flex;
+        margin-left: 0.5vw;
+	}
+	
+    a:link {
+        text-decoration: none;
+	}
+	
+    a:visited {
+        text-decoration: none;
+	}
+	
+    a:hover {
+		text-decoration: none;
+		background-color: $navbar-item-hover-color;
+	}
+	
+    a:active {
+        text-decoration: none;
+    }
+}

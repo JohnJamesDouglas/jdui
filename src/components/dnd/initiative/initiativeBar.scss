@@ -1,0 +1,64 @@
+@import './../../../css/variables.scss';
+
+.initiativeBar {
+	display: flex;
+	position: relative;
+	padding: 2vh 0 2vh 4vh;
+	margin-top: 1vh;
+
+	input {
+		color: #000;
+	}
+
+	[data-icon='chevron-up'] {
+		position: absolute;
+		top: 10%;
+		left: 0;
+		color: $initiative-color-handles;
+		margin-left: 1vh;
+	}
+	
+	[data-icon='chevron-down'] {
+		position: absolute;
+		bottom: 10%;
+		left: 0;
+		color: $initiative-color-handles;
+		margin-left: 1vh;
+	}
+
+	[data-icon='times'] {
+		position: absolute;
+		right: 0;
+		color: $initiative-color-handles;
+		cursor: pointer;
+		margin-top: 1.5px;
+		margin-right: 1vh;
+	}
+
+	&.player {
+		background-color: $initiative-color-player;
+	}
+	
+	&.dm {
+		background-color: $initiative-color-dm;
+	}
+	
+	&.npc {
+		background-color: $initiative-color-npc;
+	}
+
+	&.dragging {
+		box-shadow: $shadow-section;
+	}
+}
+
+.initiativeBar__left {
+	display: flex;
+	height: 100%;
+	width: 25%
+}
+
+.initiativeBar__right {
+	height: 100%;
+	width: 75%
+}

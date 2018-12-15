@@ -1,0 +1,16 @@
+.radio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 50%;
+}
+
+// Style the circle to align with text
+input[type=radio] {
+    height: 16px;
+    width: 16px;
+    vertical-align: top;
+    margin: 0px;
+    margin-right: 2px;
+}

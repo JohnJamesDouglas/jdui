@@ -1,0 +1,96 @@
+[class*='col__'] {
+    float: left;
+    min-height: 1px;
+    width: 16.66%;
+}
+
+.col--gutters {
+    padding: 0 1vh; 
+}
+
+@media only screen and (max-width: 768px) {
+    /* Small size screens */   
+    .col__s--1 { width: percentage(100/12/100) }
+    .col__s--2 { width: percentage((100/12)*2/100) }
+    .col__s--3 { width: percentage((100/12)*3/100) }
+    .col__s--4 { width: percentage((100/12)*4/100) }
+    .col__s--5 { width: percentage((100/12)*5/100) }
+    .col__s--6 { width: percentage((100/12)*6/100) }
+    .col__s--7 { width: percentage((100/12)*7/100) }
+    .col__s--8 { width: percentage((100/12)*8/100) }
+    .col__s--9 { width: percentage((100/12)*9/100) }
+    .col__s--10 { width: percentage((100/12)*10/100) }
+    .col__s--11 { width: percentage((100/12)*11/100) }
+    .col__s--12 { width: percentage((100/12)*12/100) }
+
+    .col__s--offset-1 { margin-left: percentage(100/12/100) }
+    .col__s--offset-2 { margin-left: percentage((100/12)*2/100) }
+    .col__s--offset-3 { margin-left: percentage((100/12)*3/100) }
+    .col__s--offset-4 { margin-left: percentage((100/12)*4/100) }
+    .col__s--offset-5 { margin-left: percentage((100/12)*5/100) }
+    .col__s--offset-6 { margin-left: percentage((100/12)*6/100) }
+    .col__s--offset-7 { margin-left: percentage((100/12)*7/100) }
+    .col__s--offset-8 { margin-left: percentage((100/12)*8/100) }
+    .col__s--offset-9 { margin-left: percentage((100/12)*9/100) }
+    .col__s--offset-10 { margin-left: percentage((100/12)*10/100) }
+    .col__s--offset-11 { margin-left: percentage((100/12)*11/100) }
+    .col__s--offset-12 { margin-left: percentage((100/12)*12/100) }
+}
+
+@media only screen and (min-width: 768px) {
+    /* Medium size screens */
+    .col__m--1 { width: percentage(100/12/100) }
+    .col__m--2 { width: percentage((100/12)*2/100) }
+    .col__m--3 { width: percentage((100/12)*3/100) }
+    .col__m--4 { width: percentage((100/12)*4/100) }
+    .col__m--5 { width: percentage((100/12)*5/100) }
+    .col__m--6 { width: percentage((100/12)*6/100) }
+    .col__m--7 { width: percentage((100/12)*7/100) }
+    .col__m--8 { width: percentage((100/12)*8/100) }
+    .col__m--9 { width: percentage((100/12)*9/100) }
+    .col__m--10 { width: percentage((100/12)*10/100) }
+    .col__m--11 { width: percentage((100/12)*11/100) }
+    .col__m--12 { width: percentage((100/12)*12/100) }
+
+    .col__m--offset-1 { margin-left: percentage(100/12/100) }
+    .col__m--offset-2 { margin-left: percentage((100/12)*2/100) }
+    .col__m--offset-3 { margin-left: percentage((100/12)*3/100) }
+    .col__m--offset-4 { margin-left: percentage((100/12)*4/100) }
+    .col__m--offset-5 { margin-left: percentage((100/12)*5/100) }
+    .col__m--offset-6 { margin-left: percentage((100/12)*6/100) }
+    .col__m--offset-7 { margin-left: percentage((100/12)*7/100) }
+    .col__m--offset-8 { margin-left: percentage((100/12)*8/100) }
+    .col__m--offset-9 { margin-left: percentage((100/12)*9/100) }
+    .col__m--offset-10 { margin-left: percentage((100/12)*10/100) }
+    .col__m--offset-11 { margin-left: percentage((100/12)*11/100) }
+    .col__m--offset-12 { margin-left: percentage((100/12)*12/100) }
+}
+
+@media only screen and (min-width: 1200px) {
+    /* Large size screens */
+    .col__l--1 { width: percentage(100/12/100) }
+    .col__l--2 { width: percentage((100/12)*2/100) }
+    .col__l--3 { width: percentage((100/12)*3/100) }
+    .col__l--4 { width: percentage((100/12)*4/100) }
+    .col__l--5 { width: percentage((100/12)*5/100) }
+    .col__l--6 { width: percentage((100/12)*6/100) }
+    .col__l--7 { width: percentage((100/12)*7/100) }
+    .col__l--8 { width: percentage((100/12)*8/100) }
+    .col__l--9 { width: percentage((100/12)*9/100) }
+    .col__l--10 { width: percentage((100/12)*10/100) }
+    .col__l--11 { width: percentage((100/12)*11/100) }
+    .col__l--12 { width: percentage((100/12)*12/100) }
+
+    .col__l--offset-1 { margin-left: percentage(100/12/100) }
+    .col__l--offset-2 { margin-left: percentage((100/12)*2/100) }
+    .col__l--offset-3 { margin-left: percentage((100/12)*3/100) }
+    .col__l--offset-4 { margin-left: percentage((100/12)*4/100) }
+    .col__l--offset-5 { margin-left: percentage((100/12)*5/100) }
+    .col__l--offset-6 { margin-left: percentage((100/12)*6/100) }
+    .col__l--offset-7 { margin-left: percentage((100/12)*7/100) }
+    .col__l--offset-8 { margin-left: percentage((100/12)*8/100) }
+    .col__l--offset-9 { margin-left: percentage((100/12)*9/100) }
+    .col__l--offset-10 { margin-left: percentage((100/12)*10/100) }
+    .col__l--offset-11 { margin-left: percentage((100/12)*11/100) }
+    .col__l--offset-12 { margin-left: percentage((100/12)*12/100) }
+}

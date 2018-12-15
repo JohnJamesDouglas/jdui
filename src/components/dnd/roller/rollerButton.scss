@@ -1,0 +1,12 @@
+.rerollButton {
+	cursor: default;
+
+	svg {
+		animation-play-state: paused;
+	}
+}
+
+.rerollButton:focus {
+    outline: 0;
+    border: inherit;
+}

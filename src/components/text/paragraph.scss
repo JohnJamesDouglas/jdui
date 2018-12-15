@@ -1,0 +1,25 @@
+.paragraph {
+    margin: 0;
+    font-size: 2vh;
+	border-bottom: 1px solid transparent;
+}
+
+.paragraph--label {
+    padding: 1vh 0;
+}
+
+.paragraph--center {
+    text-align: center;
+}
+
+.paragraph--left {
+    text-align: left;
+}
+
+.paragraph--right {
+    text-align: right;
+}
+
+.paragraph--justify {
+    text-align: justify;
+}

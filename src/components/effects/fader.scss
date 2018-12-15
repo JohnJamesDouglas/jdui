@@ -1,0 +1,11 @@
+@import '../../css/variables.scss';
+
+.fader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: $navbar-shelf-top;
+    left: 0;
+	background: rgba(0,0,0,1);
+    z-index: $z-index-fader;
+}

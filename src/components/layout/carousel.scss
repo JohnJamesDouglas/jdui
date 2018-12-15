@@ -1,0 +1,67 @@
+$carousel-mover-color: #999fa8;
+$carousel-opacity: 0.75;
+
+.carousel {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: purple;
+}
+
+.carousel-mover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 20%;
+    opacity: $carousel-opacity;
+    color: $carousel-mover-color;
+    cursor: pointer;
+}
+
+.carousel-mover:hover {
+    color: darken($carousel-mover-color, 20%);
+}
+
+.carousel-img-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: lightgray;
+    height: 100%;
+    width: 100%;
+}
+
+.chevron-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.carousel-pill-container {
+    position: absolute;
+    top: 90%;
+    left: 20%;
+    height: 10%;
+    width: 60%;
+    opacity: $carousel-opacity;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-pill {
+    opacity: $carousel-opacity;
+    height: 25%;
+    margin-left: 5px;
+    cursor: pointer;
+    background: $carousel-mover-color;
+}
+
+.carousel-pill:last-of-type {
+     margin-right: 5px;
+}
+
+.carousel-pill.active {
+    background: darken($carousel-mover-color, 20%);
+}

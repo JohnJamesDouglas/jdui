@@ -1,0 +1,17 @@
+.tabbed-panel-header {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    box-sizing: border-box;
+    background: lightseagreen;
+}
+
+.tabbed-panel-header.active {
+    background: lightpink;
+}
+
+.tabbed-panel-header div {
+    pointer-events: none;
+}

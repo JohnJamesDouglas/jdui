@@ -1,0 +1,32 @@
+@import '../../css/variables.scss';
+
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+    width: 100%;
+	height: $footer-height;
+	background: #dbdbdf;
+}
+
+.footer__links {
+    display: flex;
+	align-items: center;
+	height: 100%;
+	padding: 0 1vw;
+	
+	p {
+		font-size: 1.25vh;
+		margin: 0;
+	}
+}
+
+.footer__brands {
+	display: flex;
+	align-items: center;
+	height: 100%;
+
+	svg {
+		margin-right: 4.5vw;
+	}
+}

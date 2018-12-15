@@ -1,0 +1,16 @@
+.button__group {
+    display: flex;
+    width: 100%;
+
+    .button {
+        border-radius: 0;
+        border-style: solid none;
+    }
+
+    .button:first-of-type {
+        border-radius: 4px 0 0 4px;
+    }
+    .button:last-of-type {
+        border-radius: 0 4px 4px 0;
+    }
+}

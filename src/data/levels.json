@@ -1,0 +1,23 @@
+[
+    { "Experience Points": 0, "Level": 1, "Proficiency Bonus": 2 },
+    { "Experience Points": 300, "Level": 2, "Proficiency Bonus": 2 },
+    { "Experience Points": 900, "Level": 3, "Proficiency Bonus": 2 },
+    { "Experience Points": 2700, "Level": 4, "Proficiency Bonus": 2 },
+    { "Experience Points": 65000, "Level": 5, "Proficiency Bonus": 3 },
+    { "Experience Points": 14000, "Level": 6, "Proficiency Bonus": 3 },
+    { "Experience Points": 23000, "Level": 7, "Proficiency Bonus": 3 },
+    { "Experience Points": 34000, "Level": 8, "Proficiency Bonus": 3 },
+    { "Experience Points": 48000, "Level": 9, "Proficiency Bonus": 4 },
+    { "Experience Points": 64000, "Level": 10, "Proficiency Bonus": 4 },
+    { "Experience Points": 85000, "Level": 11, "Proficiency Bonus": 4 },
+    { "Experience Points": 100000, "Level": 12, "Proficiency Bonus": 4 },
+    { "Experience Points": 120000, "Level": 13, "Proficiency Bonus": 5 },
+    { "Experience Points": 140000, "Level": 14, "Proficiency Bonus": 5 },
+    { "Experience Points": 165000, "Level": 15, "Proficiency Bonus": 5 },
+    { "Experience Points": 195000, "Level": 16, "Proficiency Bonus": 5 },
+    { "Experience Points": 225000, "Level": 17, "Proficiency Bonus": 6 },
+    { "Experience Points": 265000, "Level": 18, "Proficiency Bonus": 6 },
+    { "Experience Points": 305000, "Level": 19, "Proficiency Bonus": 6 },
+    { "Experience Points": 355000, "Level": 20, "Proficiency Bonus": 6 },
+    { "Experience Points": "MAX", "Level": 21, "Proficiency Bonus": 6 }
+]

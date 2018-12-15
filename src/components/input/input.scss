@@ -1,0 +1,70 @@
+@import '../../css/variables.scss';
+
+.input {
+	width: 100%;
+    padding: 1vh;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 2vh;
+	background-color: transparent;
+	color: $input-font-color;
+}
+
+.input__search {
+    width: 100%;
+    // -webkit-transition: width 0.4s ease-in-out;
+    // transition: width 0.4s ease-in-out;
+    position: relative;
+
+    input {
+        padding-left: 4vh;
+    }
+
+    svg {
+		position: absolute;
+		left: 0.8vw;
+		top: 25%;
+		height: 50%;
+		color: #b7b7b7;
+		//transition: 0.3s;
+    }
+}
+
+.input:focus {
+	width: 100%;
+    outline: 0;
+    border: none;
+    border-bottom: 1px solid #2196f3;
+}
+
+.input--center {
+    text-align: center;
+}
+
+.input--left {
+    text-align: left;
+}
+
+.input--right {
+    text-align: right;
+}
+
+.input--justify {
+    text-align: justify;
+}
+
+input::-webkit-input-placeholder {
+    color: $placeholder-color !important;
+}
+    
+input:-moz-placeholder { /* Firefox 18- */
+    color: $placeholder-color !important;  
+}
+    
+input::-moz-placeholder {  /* Firefox 19+ */
+    color: $placeholder-color !important;  
+}
+    
+input:-ms-input-placeholder {  
+    color: $placeholder-color !important;  
+}

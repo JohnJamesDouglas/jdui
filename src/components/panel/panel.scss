@@ -1,0 +1,27 @@
+.panel {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background: lightgray;
+	vertical-align: middle;
+	min-height: 1vh;
+	min-width: 1vw;
+	border-radius: 4px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.panel--top {
+	flex-direction: column;
+}
+
+.panel--bottom {
+	flex-direction: column-reverse;
+}
+
+.panel--left {
+	flex-direction: row;
+}
+
+.panel--right {
+	flex-direction: row-reverse;
+}

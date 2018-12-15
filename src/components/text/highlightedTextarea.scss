@@ -1,0 +1,92 @@
+@import '../../css/variables.scss';
+
+.textarea--highlight {
+    width: 100%;
+    margin: 0;
+    vertical-align: middle;
+	outline: none;
+	padding: 1vh;
+	border: none;
+	border-top: 1px solid #ccc;
+	//border-radius: 4px;
+	font-size: 2vh;
+	color: $input-font-color;
+	min-height: 200px;
+	resize: none;
+}
+
+.textarea--resize {
+	resize: vertical;
+}
+
+.textarea--highlight::-webkit-input-placeholder {
+	color: $placeholder-color;
+}
+
+.textarea--highlight:-moz-placeholder { /* Firefox 18- */
+	color: $placeholder-color;  
+}
+
+.textarea--highlight::-moz-placeholder {  /* Firefox 19+ */
+	color: $placeholder-color;  
+}
+
+.textarea--highlight:-ms-input-placeholder {
+	color: $placeholder-color;  
+}
+
+.hwt-container {
+	display: inline-block;
+	position: relative;
+	overflow: hidden !important;
+	-webkit-text-size-adjust: none !important;
+	width: 100%;
+	//border-radius: 4px;
+}
+
+.hwt-backdrop {
+	position: absolute !important;
+	top: 0 !important;
+	right: -99px !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	padding-right: 99px !important;
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
+	//border-radius: 4px;
+}
+
+.hwt-highlights {
+	width: auto !important;
+	height: auto !important;
+	border-color: transparent !important;
+	white-space: pre-wrap !important;
+	word-wrap: break-word !important;
+	color: transparent !important;
+	overflow: hidden !important;
+	font-size: 2vh;
+}
+
+.hwt-input {
+	display: block !important;
+	position: relative !important;
+	margin: 0;
+	padding: 0;
+	border-radius: 0px;
+	font: inherit;
+	font-size: 2vh;
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
+}
+
+.hwt-content {
+	border: 1px solid #ccc;
+	//border-radius: 4px;
+	background: none transparent !important;
+	padding: 1vh;
+}
+
+.hwt-content mark {
+	padding: 0 !important;
+	background-color: $color-highlight;
+}

@@ -1,0 +1,6 @@
+.image {
+    height: 100%;
+    width: 100%;
+    // Fixes images in containers rendering additional space below themselves - solution found: https://stackoverflow.com/questions/5804256/image-inside-div-has-extra-space-below-the-image
+    vertical-align: middle;
+}

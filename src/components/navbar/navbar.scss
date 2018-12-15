@@ -1,0 +1,77 @@
+@import '../../css/variables.scss';
+
+.navbar__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $navbar-color;
+    height: $navbar-height;
+	z-index: $z-index-navbar;
+	color: $navbar-text-color;
+}
+
+.shadow {
+	box-shadow: $navbar-shadow;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 1.5vw;
+}
+
+.navbar__navigation--left {
+	display: flex;
+	flex: 1;
+	align-items: center;	
+
+	& > svg {
+		height: 3vh;
+		width: 3vh !important;
+		margin-right: 1.5vw;
+	}
+
+	.navbar__item {
+		border-left: $navbar-item-border-color;
+		border-right: $navbar-item-border-color;
+	}
+
+	.navbar__item:first-of-type {
+		font-size: 2vh;
+		font-weight: bold;
+	}
+}
+
+.navbar__navigation--right {
+	display: flex;
+	
+	.navbar__item:first-of-type {
+		border-right: none;
+	}
+	.navbar__item {
+		border-left: $navbar-item-border-color;
+		border-right: $navbar-item-border-color;
+	}
+}
+
+.navbar__content-spacer {
+    height: $navbar-height;
+}
+
+@media (max-width: 768px) {
+	.navbar__navigation--right {
+		.navbar__item--condensed {
+			display:none;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.navbar__shelf {
+		.navbar__item--condensed {
+			display:none;
+		}
+	}
+}
