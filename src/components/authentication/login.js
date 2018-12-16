@@ -33,6 +33,11 @@ export default class Login extends Component {
 			<div className='login'>
 				<Input type='text' align='left' value={''} placeholder='Username' name='username' callback={handleInput} />
 				<Input type='text' align='left' value={''} placeholder='Password' name='password' callback={handleInput} />
+				<div className='login__providers'>
+					<div className='login__provider'>
+						Google
+					</div>
+				</div>
 			</div>
 		)
 	}
