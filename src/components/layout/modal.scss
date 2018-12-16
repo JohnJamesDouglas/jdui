@@ -1,15 +1,28 @@
 @import '../../css/variables.scss';
 
 .modal {
-    position: absolute;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
     top: 25%;
     left: 25%;
     height: 50%;
     width: 50%;
 	background: lightcoral;
 	border-radius: 4px;
+	overflow: hidden;
 	box-shadow: $shadow-section;
-    z-index: $z-index-modal;
+	z-index: $z-index-modal;
+	
+	button {
+		display: flex;
+	}
+}
+
+.modal__contents {
+	padding: 1vh;
+	flex: 1;
+	background-color: mediumpurple;
 }
 
 @media (max-width: 768px) {

@@ -41,7 +41,8 @@ export default class Input extends Component {
 				placeholder,
 				align,
 				icon,
-				readonly
+				readonly,
+				password
 			},
 			handleChange
 		} = this
@@ -52,7 +53,7 @@ export default class Input extends Component {
 		})
 
 		let standardInput =
-			<input className={inputClass} value={value} placeholder={placeholder} onChange={handleChange} spellCheck='false' readOnly={readonly} />
+			<input className={inputClass} type={password ? 'password' : 'text'} value={value} placeholder={placeholder} onChange={handleChange} spellCheck='false' readOnly={readonly} />
 
 		let iconInput =
 			<div className='input__search'>

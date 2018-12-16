@@ -1,5 +1,10 @@
 import './index.scss'
 
+// authentication
+import Login from './components/authentication/login'
+
+export { Login }
+
 // effects
 import Fader from './components/effects/fader'
 import Spacer from './components/effects/spacer'
