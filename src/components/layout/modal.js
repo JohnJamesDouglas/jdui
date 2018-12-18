@@ -21,13 +21,15 @@ export default class Modal extends Component {
 		} = this
 		return (
 			<React.Fragment>
-				<div className='modal' style={{ display: open ? 'block': 'none' }}>
+				<div className='modal' style={{ display: open ? 'flex' : 'none' }}>
 					{
 						open ?
-							<div>
-								{children}
+							<React.Fragment>
+								<div className='modal__contents'>
+									{children}									
+								</div>
 								<Button click={() => toggle()}>Close</Button>
-							</div>
+							</React.Fragment>
 						: null
 					}
 

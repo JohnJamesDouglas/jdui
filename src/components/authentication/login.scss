@@ -1,0 +1,25 @@
+.login {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	display: flex;
+	justify-content: center;
+
+	input:first-of-type {
+		margin-bottom: 5%;
+	}
+}
+
+.login__providers {
+	display: flex;
+	justify-content: center;
+	margin-top: 2vh;
+
+	.login__provider {
+		background: mediumseagreen;
+		height: 10vh;
+		width: 20vh;
+		line-height: 10vh;
+		text-align: center;
+	}
+}
