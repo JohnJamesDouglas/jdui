@@ -84,6 +84,15 @@
     flex: 1;
 }
 
+.svg-dice {
+	height: 5vh;
+
+	& > svg {
+		height: 100%;
+		width: 100%;
+	}
+}
+
 .selected-die {
     background: $color-highlight;
 }
@@ -93,10 +102,45 @@
 }
 
 .previous-rolls {
-    display: flex;
+	display: flex;
+	float: left;
+	width: 75%;
+
+	& > div {
+		flex: 1;
+		text-align: center;
+	}
 }
 
-.previous-roll, .previous-roll-max-roll, .previous-roll-num-dice {
-    text-align: center;
-    flex: 1;
+.previous-rolls-about {
+	display: flex;
+	float: left;
+	width: 25%;
+
+	& > div {
+		flex: 1;
+		text-align: center;
+	}
 }
+
+
+// <div className='previous-rolls'>
+// {
+// 	pr.result.map((r, j) => {
+// 		return (
+// 			<div className={`previous-roll ${r === pr.maxRoll ? 'max-roll' : ''}`} key={`roll-${j}`}>
+// 				{r}
+// 			</div>
+// 		)
+// 	})
+// }
+// </div>
+// <div className='previous-roll-num-dice'>
+// {pr.numDice}
+// </div>
+// <div className='previous-roll-max-roll'>
+// {pr.maxRoll}
+// </div>
+// <div className='previous-roll-max-roll'>
+// {pr.total}
+// </div>

@@ -689,8 +689,8 @@ export default class Sheet extends Component {
 																<Button click={() => handleInput('deathSaves', [saves, j])}>
 																	{
 																		i === 0 ?
-																			save ? <FontAwesomeIcon icon='heart' size='3x' style={{ color: 'red' }} /> : <FontAwesomeIcon icon={['far', 'circle']} size='3x' />
-																			: save ? <FontAwesomeIcon icon='skull' size='3x' style={{ color: 'white' }} /> : <FontAwesomeIcon icon={['far', 'circle']} size='3x' />
+																			save ? <FontAwesomeIcon icon='heart' style={{ color: 'red' }} /> : <FontAwesomeIcon icon={['far', 'circle']} />
+																			: save ? <FontAwesomeIcon icon='skull' style={{ color: 'white' }} /> : <FontAwesomeIcon icon={['far', 'circle']} />
 																	}
 																</Button>
 															</Col>

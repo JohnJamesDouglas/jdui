@@ -1,3 +1,7 @@
+@import '../../../css/variables.scss';
+
 .dungeonMaster {
-	
+	display: flex;
+	flex: 1;
+	box-shadow: $shadow-section;
 }

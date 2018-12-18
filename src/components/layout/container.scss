@@ -10,3 +10,45 @@
     height: 100%;
     overflow-y: auto;
 }
+
+.container__toggle {
+	position: absolute;
+	top: $navbar-height;
+	right: 0;
+	background: $container-background-color-toggle;
+	height: 3vh;
+	width: 3vh;
+	padding: 0.1vh;
+	color: $container-color-toggle;
+
+	svg {
+		display: flex;
+		height: 100%;
+		width: 100% !important;
+	}
+}
+
+.container__toggle:hover {
+	background-color: $container-background-color-toggle-hover;
+}
+
+.container--toggleColumn {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	background-color: lightseagreen;
+}
+
+.container--toggleRow {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+	background-color: lightslategray;
+}
+
+.container--toggleColumn, .container--toggleRow {
+	& > div:not(.container__toggle) {
+		background-color: lightsalmon;
+		flex: 1;
+	}
+}

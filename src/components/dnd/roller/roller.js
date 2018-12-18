@@ -209,42 +209,30 @@ export default class Roller extends Component {
 								{
 									prevResults.map((pr, i) => {
 										return (
-											<React.Fragment key={i}>
-												<Col s={9} m={9} l={9} gutters>
-													<div key={`rolls-${i}`} className='previous-rolls'>
-														{
-															pr.result.map((r, j) => {
-																return (
-																	<div className={`previous-roll ${r === pr.maxRoll ? 'max-roll' : ''}`} key={`roll-${j}`}>
-																		{r}
-																	</div>
-																)
-															})
-														}
+											<Row key={i}>
+												<div className='previous-rolls'>
+													{
+														pr.result.map((r, j) => {
+															return (
+																<div className={`previous-roll ${r === pr.maxRoll ? 'max-roll' : ''}`} key={`roll-${j}`}>
+																	{r}
+																</div>
+															)
+														})
+													}
+												</div>
+												<div className='previous-rolls-about'>
+													<div>
+														{pr.numDice}
 													</div>
-												</Col>
-												<Col s={1} m={1} l={1} gutters>
-													<div key={`num-${i}`}>
-														<div className='previous-roll-num-dice'>
-															{pr.numDice}
-														</div>
+													<div>
+														{pr.maxRoll}
 													</div>
-												</Col>
-												<Col s={1} m={1} l={1} gutters>
-													<div key={`max-${i}`}>
-														<div className='previous-roll-max-roll'>
-															{pr.maxRoll}
-														</div>
+													<div>
+														{pr.total}
 													</div>
-												</Col>
-												<Col s={1} m={1} l={1} gutters>
-													<div key={`total-${i}`}>
-														<div className='previous-roll-max-roll'>
-															{pr.total}
-														</div>
-													</div>
-												</Col>
-											</React.Fragment>
+												</div>
+											</Row>
 										)
 									})
 								}
@@ -255,6 +243,13 @@ export default class Roller extends Component {
 			</div>
 		)
 	}
+}
+
+Roller.defaultProps = {
+	numDice: 1,
+	historyLimit: 1,
+	reroll: true,
+	delay: 1000
 }
 
 Roller.propTypes = {

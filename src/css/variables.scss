@@ -59,3 +59,8 @@ $initiative-color-handles: #2d2d2d;
 $initiative-color-player: #3BADEE;
 $initiative-color-dm: #D31717;
 $initiative-color-npc: #EAE829;
+
+// container
+$container-color-toggle: #fff;
+$container-background-color-toggle: $color-primary;
+$container-background-color-toggle-hover: darken($color-primary, 10%);

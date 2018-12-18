@@ -69,18 +69,25 @@ export default class Initiative extends Component {
 		this.setState({ items: x })
 	}
 	sort = type => {
-		console.log('sort')
+		const {
+			state: {
+				items
+			}
+		} = this
+
+		if (items.length === 0) {
+			return
+		}
+
 		switch(type) {
 			case 'asc':
-				console.log(`[0] initiativeValue=${this.state.items[0].initiativeValue}`)
-				// this.setState(state => ({ items: state.items.sort((a,b) => (a.initiativeValue > b.initiativeValue) ? 1 : ((b.initiativeValue > a.initiativeValue) ? -1 : 0)) }))
 				this.setState(state => ({ items: state.items.sort((a,b) => parseFloat(a.initiativeValue) - parseFloat(b.initiativeValue))}))
 				break;
 			case 'dsc':
 				this.setState(state => ({ items: state.items.sort((a,b) => parseFloat(b.initiativeValue) - parseFloat(a.initiativeValue))}))
 				break;
 			default:
-				console.log(`sort error supplied: ${JSON.stringify(name)}`)
+				console.log(`sort error supplied: ${JSON.stringify(type)}`)
 		}
 	}
 	handleInput = (name, data) => {
@@ -136,16 +143,16 @@ export default class Initiative extends Component {
 						<Button click={() => addItem('npc')}>Add NPC</Button>
 					</Col>
 					<Col s={12} m={4} l={4} gutters>
-						<Button click={() => addItem('dm')}>Add DM Controlled</Button>
+						<Button click={() => addItem('dm')}>Add DM</Button>
 					</Col>
 				</Row>
 				<Row>
 					<Spacer height='1vh' />
 					<Col s={12} m={6} l={6} gutters>
-						<Button click={() => sort('dsc')}><FontAwesomeIcon icon='sort-amount-down' /> Sort Descending</Button>
+						<Button click={() => sort('dsc')}><FontAwesomeIcon icon='sort-amount-down' /> Sort</Button>
 					</Col>
 					<Col s={12} m={6} l={6} gutters>
-						<Button click={() => sort('asc')}><FontAwesomeIcon icon='sort-amount-up' /> Sort Ascending</Button>
+						<Button click={() => sort('asc')}><FontAwesomeIcon icon='sort-amount-up' /> Sort</Button>
 					</Col>
 				</Row>
 				<DragDropContext onDragEnd={onDragEnd}>
