@@ -43,24 +43,24 @@ $placeholder-color: #b7b7b7;
 $footer-height: 4vh;
 
 // checkbox
-$checkbox-color-true: $color-highlight;
-$checkbox-color-false: #fff;
+$checkbox-true-color: $color-highlight;
+$checkbox-false-color: #fff;
 
 // progress
 $progress-color: #b90000;
-$progress-color-background: gray;
-$progress-color-temporary: #17d350;
-$progress-color-capped: #b90000;
-$progress-color-temporary-capped: #17d350;
+$progress-background-color: gray;
+$progress-temporary-color: #17d350;
+$progress-capped-color: #b90000;
+$progress-temporary-color-capped: #17d350;
 
 // initiative
-$initiative-color-background: $color-secondary-alt;
-$initiative-color-handles: #2d2d2d;
-$initiative-color-player: #3BADEE;
-$initiative-color-dm: #D31717;
-$initiative-color-npc: #EAE829;
+$initiative-background-color: $color-secondary-alt;
+$initiative-handles-color: #2d2d2d;
+$initiative-player-color: #3BADEE;
+$initiative-dm-color: #D31717;
+$initiative-npc-color: #EAE829;
 
 // container
-$container-color-toggle: #fff;
-$container-background-color-toggle: $color-primary;
-$container-background-color-toggle-hover: darken($color-primary, 10%);
+$container-toggle-color: #fff;
+$container-toggle-background-color: $color-primary;
+$container-toggle-background-color-hover: darken($color-primary, 10%);

@@ -15,7 +15,7 @@
 // 	border-radius: 2vh;
 // 	width: 2vh;
 // 	height: 2vh;
-// 	background: $checkbox-color-false;
+// 	background: $checkbox-false-color;
 // 	vertical-align: middle;
 // 	margin: 0;
 // 	position: relative;
@@ -24,7 +24,7 @@
 // }
 
 // .checkbox--round :checked + span {
-// 	background: $checkbox-color-true;
+// 	background: $checkbox-true-color;
 // 	width: 2vh;
 // 	height: 2vh;
 // 	margin: 0;
@@ -44,7 +44,7 @@
     position: absolute;
     width: 22px;
     height: 22px;
-    background-color: $checkbox-color-true;
+    background-color: $checkbox-true-color;
     border-radius: 11px;
     left: 0;
     top: 0;
@@ -69,9 +69,9 @@
 }
 
 .checkbox--true {
-	background-color: $checkbox-color-true;
+	background-color: $checkbox-true-color;
 }
 
 .checkbox--false {
-	background-color: $checkbox-color-false;
+	background-color: $checkbox-false-color;
 }

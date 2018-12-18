@@ -15,11 +15,11 @@
 	position: absolute;
 	top: $navbar-height;
 	right: 0;
-	background: $container-background-color-toggle;
+	background: $container-toggle-background-color;
 	height: 3vh;
 	width: 3vh;
 	padding: 0.1vh;
-	color: $container-color-toggle;
+	color: $container-toggle-color;
 
 	svg {
 		display: flex;
@@ -29,7 +29,7 @@
 }
 
 .container__toggle:hover {
-	background-color: $container-background-color-toggle-hover;
+	background-color: $container-toggle-background-color-hover;
 }
 
 .container--toggleColumn {

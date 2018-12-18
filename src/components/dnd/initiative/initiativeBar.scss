@@ -14,7 +14,7 @@
 		position: absolute;
 		top: 10%;
 		left: 0;
-		color: $initiative-color-handles;
+		color: $initiative-handles-color;
 		margin-left: 1vh;
 	}
 	
@@ -22,29 +22,29 @@
 		position: absolute;
 		bottom: 10%;
 		left: 0;
-		color: $initiative-color-handles;
+		color: $initiative-handles-color;
 		margin-left: 1vh;
 	}
 
 	[data-icon='times'] {
 		position: absolute;
 		right: 0;
-		color: $initiative-color-handles;
+		color: $initiative-handles-color;
 		cursor: pointer;
 		margin-top: 1.5px;
 		margin-right: 1vh;
 	}
 
 	&.player {
-		background-color: $initiative-color-player;
+		background-color: $initiative-player-color;
 	}
 	
 	&.dm {
-		background-color: $initiative-color-dm;
+		background-color: $initiative-dm-color;
 	}
 	
 	&.npc {
-		background-color: $initiative-color-npc;
+		background-color: $initiative-npc-color;
 	}
 
 	&.dragging {

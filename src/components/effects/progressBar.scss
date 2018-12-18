@@ -6,7 +6,7 @@
 	min-width: 200px;
 	min-height: 4vh;
     height: 100%;
-    background: $progress-color-background;
+    background: $progress-background-color;
 	border-radius: 4px;
 }
 
@@ -22,7 +22,7 @@
 
 .progress__bar--capped {
     border-radius: 4px;
-    background-color: $progress-color-capped;
+    background-color: $progress-capped-color;
 }
 
 .progress__bar--text {
@@ -53,11 +53,11 @@
     align-items: center;
 	height: 1vh;
 	min-height: 1vh;
-    background-color: $progress-color-temporary;
+    background-color: $progress-temporary-color;
     border-radius: 0 0 0 4px;
 }
 
 .temporary__bar--capped {
     border-radius: 0 0 4px 4px;
-    background-color: $progress-color-temporary-capped;
+    background-color: $progress-temporary-color-capped;
 }
