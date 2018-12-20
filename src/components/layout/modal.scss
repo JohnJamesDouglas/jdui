@@ -13,10 +13,6 @@
 	overflow: hidden;
 	box-shadow: $shadow-section;
 	z-index: $z-index-modal;
-	
-	button {
-		display: flex;
-	}
 }
 
 .modal__contents {

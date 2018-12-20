@@ -16,7 +16,6 @@ export default class ProgressBar extends Component {
         if (clamp((nextProps.current / nextProps.max * 100), 0, 100)+'%' !== percentage) {
             this.setState({ percentage: clamp((nextProps.current / nextProps.max * 100), 0, 100).toFixed(2)+'%' });
         }
-        //if (clamp((nextProps.current / nextProps.max * 100), 0, 100)+'%' !== temporaryPercentage) {
         if (clamp((nextProps.temporary / nextProps.max * 100), 0, 100).toFixed(2)+'%' !== temporaryPercentage) {
             this.setState({ temporaryPercentage: clamp((nextProps.temporary / nextProps.max * 100), 0, 100).toFixed(2)+'%' });
         }
@@ -45,9 +44,6 @@ export default class ProgressBar extends Component {
             'progress__bar--progress': true,
             'progress__bar--capped': percentage === '100.00%',
 		})
-
-		console.log(`temporaryPercentage=${temporaryPercentage}`)
-		console.log(`temporaryPercentage === '100.00%' =${temporaryPercentage === '100.00%'}`)
 
         let temporaryProgressClass = classNames({
             'temporary__bar--progress': true,

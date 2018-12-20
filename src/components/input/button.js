@@ -11,7 +11,7 @@ const button = props => {
         'button--selected': props.selected
     })
     return (
-        <button className={buttonClass} onClick={props.click}>
+        <button type='button' className={buttonClass} onClick={props.click}>
             {props.children}
         </button>
     )

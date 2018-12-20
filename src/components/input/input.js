@@ -22,10 +22,12 @@ export default class Input extends Component {
 		// If the input type is number (note this is denominated by a react prop not the prop on the DOM element)
 		if (type === 'number') {
 			if (e.target.value === '' || re.test(e.target.value)) {
-				this.setState({ value: e.target.value }, callback(name, e.target.value))
+				//this.setState({ value: e.target.value }, callback(name, e.target.value))
+				callback(name, e.target.value)
 			}
 		} else {
-			this.setState({ value: e.target.value }, callback(name, e.target.value))
+			//this.setState({ value: e.target.value }, callback(name, e.target.value))
+			callback(name, e.target.value)
 		}
 	}
 	reset = () => {
@@ -53,13 +55,22 @@ export default class Input extends Component {
 		})
 
 		let standardInput =
-			<input className={inputClass} type={password ? 'password' : 'text'} value={value} placeholder={placeholder} onChange={handleChange} spellCheck='false' readOnly={readonly} />
+			<input className={inputClass} type={password ? 'password' : 'text'} defaultValue={value} placeholder={placeholder} onChange={handleChange} spellCheck='false' readOnly={readonly} />
 
 		let iconInput =
 			<div className='input__search'>
-				<input className={inputClass} value={value} placeholder={placeholder} onChange={handleChange} spellCheck='false' readOnly={readonly} />
+				<input className={inputClass} defaultValue={value} placeholder={placeholder} onChange={handleChange} spellCheck='false' readOnly={readonly} />
 				{icon}
 			</div>
+
+		// let standardInput =
+		// 	<input className={inputClass} type={password ? 'password' : 'text'} value={value} placeholder={placeholder} onChange={handleChange} spellCheck='false' readOnly={readonly} />
+
+		// let iconInput =
+		// 	<div className='input__search'>
+		// 		<input className={inputClass} value={value} placeholder={placeholder} onChange={handleChange} spellCheck='false' readOnly={readonly} />
+		// 		{icon}
+		// 	</div>
 
 		return (
 			icon ? iconInput : standardInput
