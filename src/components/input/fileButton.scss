@@ -1,0 +1,43 @@
+@import '../../css/variables.scss';
+
+.fileButton {
+	position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 1vh 0;
+    border-radius: 4px;
+    border: 1px solid $color-primary;
+    background-color: $color-primary;
+    color: #fff;
+    font-size: 2vh;
+    cursor: pointer;
+}
+
+.fileButton--selected {
+    background-color: darken($color-primary, 20%);
+}
+
+.fileButton:focus {
+    outline: 0;
+    border: 1px solid #2196f3;
+}
+
+.fileButton:hover {
+    background-color: darken($color-primary, 10%);
+    border: 1px solid darken($color-primary, 10%);
+}
+
+input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}

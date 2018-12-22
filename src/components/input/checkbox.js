@@ -32,10 +32,7 @@ export default class Checkbox extends Component {
 		return (
 			<div className='checkbox' onClick={handleClick}>
 				{
-					!checked && <div className='checkbox__circle checkbox--false'><div className='checkbox__left' /><div className='checkbox__right' /></div>
-				}
-				{
-					checked && <div className='checkbox__circle checkbox--true'><div className='checkbox__left' /><div className='checkbox__right' /></div>
+					checked ? <div className='checkbox__circle checkbox--true'><div className='checkbox__left' /><div className='checkbox__right' /></div> : <div className='checkbox__circle checkbox--false'><div className='checkbox__left' /><div className='checkbox__right' /></div>
 				}
 			</div>
 		)

@@ -13,6 +13,7 @@ $z-index-fader: $z-index-navbar;
 $z-index-dropdown: 1;
 $z-index-modal: 4;
 $z-index-snowflakes: 5;
+$z-index-notification: 6;
 
 // navbar
 $navbar-color: #2d2d2d;
@@ -30,9 +31,6 @@ $navbar-shelf-text-color: #000;
 $navbar-shelf-hover-color: $color-primary;
 $navbar-shelf-text-size: 2vh;
 $navbar-shelf-top: 8vh;
-$navbar-shelf-width: 20%;
-$navbar-shelf-max-width: 400px;
-$navbar-shelf-min-width: 200px;
 $navbar-shelf-padding: 0;
 
 // input
@@ -64,3 +62,8 @@ $initiative-npc-color: #EAE829;
 $container-toggle-color: #fff;
 $container-toggle-background-color: $color-primary;
 $container-toggle-background-color-hover: darken($color-primary, 10%);
+
+// notification
+$notification-success-color: green;
+$notification-warning-color: orange;
+$notification-error-color: red;

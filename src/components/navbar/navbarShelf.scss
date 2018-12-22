@@ -7,9 +7,6 @@
     position: fixed;
     top: $navbar-height;
     left: 0;
-    width: $navbar-shelf-width;
-    max-width: $navbar-shelf-max-width;
-    min-width: $navbar-shelf-min-width;
     z-index: $z-index-navbar-shelf;
     transform: translateX(-105%);
 	transition: transform 0.3s ease-out;
@@ -23,7 +20,8 @@
 .navbar__shelf a {
 	color: $navbar-shelf-text-color;
     text-decoration: none;
-    font-size: 2vh;
+	font-size: 2vh;
+	padding: 0;
 }
 
 .navbar__shelf a:hover {
@@ -31,11 +29,9 @@
     color: $navbar-shelf-hover-color;
 }
 
-
 .navbar__shelf {
     .navbar__item {
-		margin: 2vh 0 2vh 1vh;
+		margin: 2vh;
 		height: auto;
-		width: 100%;
     }
 }

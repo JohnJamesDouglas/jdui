@@ -1,16 +1,17 @@
-.button__group {
+.buttonGroup {
     display: flex;
-    width: 100%;
+	width: 100%;
 
-    .button {
+    .button, .fileButton {
         border-radius: 0;
-        border-style: solid none;
+		border-style: solid none;
+		outline: none;
     }
 
-    .button:first-of-type {
+    .button:first-of-type, .fileButton:first-of-type {
         border-radius: 4px 0 0 4px;
     }
-    .button:last-of-type {
+    .button:last-of-type, .fileButton:last-of-type {
         border-radius: 0 4px 4px 0;
     }
 }

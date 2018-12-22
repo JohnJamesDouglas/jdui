@@ -18,6 +18,7 @@ import Title from '../../text/title'
 import Paragraph from '../../text/paragraph'
 import Textarea from '../../text/textarea'
 import Button from '../../input/button'
+import FileButton from '../../input/fileButton'
 import ButtonGroup from '../../input/buttonGroup'
 import Input from '../../input/input'
 import Dropdown from '../../input/dropdown'
@@ -28,6 +29,7 @@ import Radio from '../../input/radio'
 import OptionGroup from '../../input/optionGroup'
 import Accordion from '../../layout/accordion/accordion'
 import AccordionHeader from '../../layout/accordion/accordionHeader'
+import Notification from '../../alert/notification'
 
 // Data
 import Player from '../../../data/player.json'
@@ -55,19 +57,56 @@ export default class Sheet extends Component {
 			moneyIcons: [<Copper />, <Silver />, <Electrum />, <Gold />, <Platinum />],
 			equipmentSearchValue: '',
 			proficiencesLanguagesSearchValue: '',
-			featuresTraitsSearchValue: ''
+			featuresTraitsSearchValue: '',
+			nameError: false
 		}
 		this.form = React.createRef()
+		this.accordion = React.createRef()
 	}
 	downloadPlayer = () => {
-
+		try {
+			let textToWrite = JSON.stringify(this.state.player)
+			if (textToWrite === JSON.stringify(Player)) {
+				this.setState(state => ({ nameError: !state.nameError }))
+				return
+			}
+			let textFileAsBlob = new Blob([textToWrite], { type: 'application/json' })
+			let fileNameToSaveAs = `Character-${this.state.player.Info["Character Name"]}`
+			// If the file name is empty - set to the default
+			if (fileNameToSaveAs === "") {
+				fileNameToSaveAs = "Dungeons&DragonsCharacter"
+			}
+	
+			let downloadLink = document.createElement("a")
+			downloadLink.download = fileNameToSaveAs
+			downloadLink.innerHTML = "Download File"
+			if (window.URL !== null) {
+				// Chrome allows the link to be clicked without actually adding it to the DOM.
+				downloadLink.href = window.URL.createObjectURL(textFileAsBlob)
+			} else {
+				// Firefox requires the link to be added to the DOM before it can be clicked.
+				downloadLink.href = window.URL.createObjectURL(textFileAsBlob)
+				downloadLink.onclick = destroyClickedElement
+				downloadLink.style.display = "none"
+				document.body.appendChild(downloadLink)
+			}
+			downloadLink.click()
+		}
+		catch (e) {
+			logMyErrors(e) // pass exception object to error handler
+		}
 	}
-	uploadPlayer = () => {
-		
+	uploadPlayer = (file) => {
+		console.log(`uP=${file}`)
 	}
 	clear = () => {
 		this.setState({ player: Player})
 		this.form.current.reset()
+		this.accordion.current.closeAllSections()
+	}
+	hideNotification = () => {
+		console.log('hN')
+		this.setState({ nameError: false })
 	}
 	handleInput = (name, data) => {
 		const { player } = this.state
@@ -454,21 +493,24 @@ export default class Sheet extends Component {
 	}
 	render() {
 		const {
-			state: { player, levels, alignments, moneyIcons, equipmentSearchValue, proficiencesLanguagesSearchValue, featuresTraitsSearchValue },
-			form, handleInput, highlighting, decrementLevel, incrementLevel, downloadPlayer, uploadPlayer, clear
+			state: { player, levels, alignments, moneyIcons, equipmentSearchValue, proficiencesLanguagesSearchValue, featuresTraitsSearchValue, nameError },
+			form, accordion, handleInput, highlighting, decrementLevel, incrementLevel, downloadPlayer, uploadPlayer, clear, hideNotification
 		} = this
 		return (
 			<React.Fragment>
+				<Notification type='error' delay={2000} show={nameError} callback={hideNotification}>
+					<Paragraph align='left'>Please specify a Character Name to download the JSON file.</Paragraph>
+				</Notification>
 				<form ref={form} className='sheet'>
-					<Accordion allowMultipleOpen>
+					<Accordion ref={accordion} allowMultipleOpen>
 						<div label='Info'>
 							<AccordionHeader header>
-								<Paragraph align='left' label={true}>{player.Info['Player Name'].substring(0,30)} {player.Info['Player Name'] && player.Info['Character Name'] !== '' ? '-' : null} {player.Info['Character Name'].substring(0,30)}</Paragraph>
+								<Paragraph align='left' label>{player.Info['Player Name'].substring(0,30)} {player.Info['Player Name'] && player.Info['Character Name'] !== '' ? '-' : null} {player.Info['Character Name'].substring(0,30)}</Paragraph>
 							</AccordionHeader>
 							<Row>
 								<Col s={12} m={12} l={12}>
 									<Col s={12} m={6} l={6} gutters>
-										<Paragraph align='left' label={true}>Player Name</Paragraph>
+										<Paragraph align='left' label>Player Name</Paragraph>
 									</Col>
 									<Col s={12} m={6} l={6} gutters>
 										<Input type='text' align='left' value={player.Info['Player Name']} placeholder='Player Name' name='player name' callback={handleInput} />
@@ -478,7 +520,7 @@ export default class Sheet extends Component {
 							<Row>
 								<Col s={12} m={12} l={12}>
 									<Col s={12} m={6} l={6} gutters>
-										<Paragraph align='left' label={true}>Character Name</Paragraph>
+										<Paragraph align='left' label>Character Name</Paragraph>
 									</Col>
 									<Col s={12} m={6} l={6} gutters>
 										<Input type='text' align='left' value={player.Info['Character Name']} placeholder='Character Name' name='character name' callback={handleInput} />
@@ -488,7 +530,7 @@ export default class Sheet extends Component {
 							<Row>
 								<Col s={12} m={12} l={12}>
 									<Col s={12} m={6} l={6} gutters>
-										<Paragraph align='left' label={true}>Class</Paragraph>
+										<Paragraph align='left' label>Class</Paragraph>
 									</Col>
 									<Col s={12} m={6} l={6} gutters>
 										<Input type='text' align='left' value={player.Info.Class} placeholder='Class' name='class' callback={handleInput} />
@@ -498,7 +540,7 @@ export default class Sheet extends Component {
 							<Row>
 								<Col s={12} m={12} l={12}>
 									<Col s={12} m={6} l={6} gutters>
-										<Paragraph align='left' label={true}>Background</Paragraph>
+										<Paragraph align='left' label>Background</Paragraph>
 									</Col>
 									<Col s={12} m={6} l={6} gutters>
 										<Input type='text' align='left' value={player.Info.Background} placeholder='Background' name='background' callback={handleInput} />
@@ -508,7 +550,7 @@ export default class Sheet extends Component {
 							<Row>
 								<Col s={12} m={12} l={12}>
 									<Col s={12} m={6} l={6} gutters>
-										<Paragraph align='left' label={true}>Race</Paragraph>
+										<Paragraph align='left' label>Race</Paragraph>
 									</Col>
 									<Col s={12} m={6} l={6} gutters>
 										<Input type='text' align='left' value={player.Info.Race} placeholder='Race' name='race' callback={handleInput} />
@@ -518,7 +560,7 @@ export default class Sheet extends Component {
 							<Row>
 								<Col s={12} m={12} l={12}>
 									<Col s={12} m={6} l={6} gutters>
-										<Paragraph align='left' label={true}>Alignment</Paragraph>
+										<Paragraph align='left' label>Alignment</Paragraph>
 									</Col>
 									<Col s={12} m={6} l={6} gutters>
 										<Dropdown items={alignments.map(s => { return s })} initial='Select' name='alignment' callback={handleInput} />
@@ -528,14 +570,14 @@ export default class Sheet extends Component {
 							<Row>
 								<Col s={12} m={12} l={12}>
 									<Col s={12} m={6} l={6} gutters>
-										<Paragraph align='left' label={true}>Level</Paragraph>
+										<Paragraph align='left' label>Level</Paragraph>
 									</Col>
 									<Col s={12} m={6} l={6} gutters>
 										<Col s={4} m={4} l={4}>
 											<Button click={() => decrementLevel()}>-</Button>
 										</Col>
 										<Col s={4} m={4} l={4} gutters>
-											<Paragraph align='center' label={true}>{player.Info.Level}</Paragraph>
+											<Paragraph align='center' label>{player.Info.Level}</Paragraph>
 										</Col>
 										<Col s={4} m={4} l={4}>
 											<Button click={() => incrementLevel()}>+</Button>
@@ -546,17 +588,17 @@ export default class Sheet extends Component {
 							<Row>
 								<Col s={12} m={12} l={12}>
 									<Col s={12} m={6} l={6} gutters>
-										<Paragraph align='left' label={true}>Experience Points</Paragraph>
+										<Paragraph align='left' label>Experience Points</Paragraph>
 									</Col>
 									<Col s={12} m={6} l={6} gutters>
 										<Col s={4} m={4} l={4}>
 											<Input type='number' align='center' value={player.Info['Experience Points']} placeholder='EXP' name='experience' callback={handleInput} />
 										</Col>
 										<Col s={4} m={4} l={4}>
-											<Paragraph align='center' label={true}> /</Paragraph>
+											<Paragraph align='center' label> /</Paragraph>
 										</Col>
 										<Col s={4} m={4} l={4}>
-											<Paragraph align='center' label={true}> {levels.filter(l => { if (l.Level === (player.Info.Level) + 1) { return l } })[0]['Experience Points']}</Paragraph>
+											<Paragraph align='center' label> {levels.filter(l => { if (l.Level === (player.Info.Level) + 1) { return l } })[0]['Experience Points']}</Paragraph>
 										</Col>
 										{
 											Number(player.Info['Experience Points']) !== 0 ?
@@ -651,7 +693,7 @@ export default class Sheet extends Component {
 									</Col>
 								</Col>
 								<Col s={6} m={6} l={6} offsetS={3} offsetM={3} offsetL={3}>
-									<Paragraph align='center' label={true}>Temporary Hitpoints</Paragraph>
+									<Paragraph align='center' label>Temporary Hitpoints</Paragraph>
 									<Input type='number' align='left' value={player.Hitpoints.Temporary} placeholder='temporary' name='temporary' callback={handleInput} />
 								</Col>
 							</Row>
@@ -732,7 +774,7 @@ export default class Sheet extends Component {
 												<Row key={`money-row-${i}`}>
 													<Col key={`money-col-${i}`} s={12} m={12} l={12}>
 														<Col s={3} m={3} l={3}>
-															<Paragraph align='left' label={true}>
+															<Paragraph align='left' label>
 																{money}
 															</Paragraph>
 														</Col>
@@ -784,15 +826,11 @@ export default class Sheet extends Component {
 				</form>
 				<Row>
 					<Spacer height='2vh' />
-					<Col s={12} m={4} l={4}>
+					<ButtonGroup>
 						<Button click={() => downloadPlayer()}><FontAwesomeIcon icon='download' /> Download</Button>
-					</Col>
-					<Col s={12} m={4} l={4} gutters>
-						<Button click={() => uploadPlayer()}><FontAwesomeIcon icon='upload' /> Upload</Button>
-					</Col>
-					<Col s={12} m={4} l={4}>
+						<FileButton callback={(file) => uploadPlayer(file)}><FontAwesomeIcon icon='upload' /> Upload</FileButton>
 						<Button click={() => clear()}><FontAwesomeIcon icon='trash-alt' /> Clear</Button>
-					</Col>
+					</ButtonGroup>
 				</Row>
 			</React.Fragment>
 		);

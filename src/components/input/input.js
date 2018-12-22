@@ -1,5 +1,5 @@
-import React, { Component } from "react"
-import PropTypes from "prop-types"
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -8,7 +8,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faSearch)
 
-import "./input.scss"
+import './input.scss'
 
 export default class Input extends Component {
 	constructor(props) {
@@ -55,11 +55,11 @@ export default class Input extends Component {
 		})
 
 		let standardInput =
-			<input className={inputClass} type={password ? 'password' : 'text'} defaultValue={value} placeholder={placeholder} onChange={handleChange} spellCheck='false' readOnly={readonly} />
+			<input data-lpignore='true' className={inputClass} type={password ? 'password' : 'text'} defaultValue={value} placeholder={placeholder} onChange={handleChange} spellCheck='false' readOnly={readonly} />
 
 		let iconInput =
 			<div className='input__search'>
-				<input className={inputClass} defaultValue={value} placeholder={placeholder} onChange={handleChange} spellCheck='false' readOnly={readonly} />
+				<input data-lpignore='true' className={inputClass} defaultValue={value} placeholder={placeholder} onChange={handleChange} spellCheck='false' readOnly={readonly} />
 				{icon}
 			</div>
 

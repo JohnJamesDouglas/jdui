@@ -1,5 +1,10 @@
 import './index.scss'
 
+// alert
+import Notification from './components/alert/notification'
+
+export { Notification }
+
 // authentication
 import Login from './components/authentication/login'
 
@@ -24,12 +29,13 @@ export { Footer }
 
 // input
 import Button from './components/input/button'
+import FileButton from './components/input/fileButton'
 // import Checkbox from './components/input/checkbox'
 import Input from './components/input/input'
 // import OptionGroup from './components/input/optionGroup'
 // import Radio from './components/input/radio'
 
-export { Button, Input }
+export { Button, Input, FileButton }
 
 // layout
 import AppWrapper from './components/layout/appWrapper'

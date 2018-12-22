@@ -10,7 +10,7 @@
 		color: #000;
 	}
 
-	[data-icon='chevron-up'] {
+	& > [data-icon='chevron-up'] {
 		position: absolute;
 		top: 10%;
 		left: 0;
@@ -18,7 +18,7 @@
 		margin-left: 1vh;
 	}
 	
-	[data-icon='chevron-down'] {
+	& > [data-icon='chevron-down'] {
 		position: absolute;
 		bottom: 10%;
 		left: 0;
@@ -26,7 +26,7 @@
 		margin-left: 1vh;
 	}
 
-	[data-icon='times'] {
+	& [data-icon='times'] {
 		position: absolute;
 		right: 0;
 		color: $initiative-handles-color;

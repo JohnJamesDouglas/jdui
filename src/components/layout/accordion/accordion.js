@@ -8,7 +8,7 @@ import './accordion.scss'
 class Accordion extends Component {
     static propTypes = {
         allowMultipleOpen: PropTypes.bool,
-        //children: PropTypes.instanceOf(Object).isRequired
+        children: PropTypes.instanceOf(Object).isRequired
     }
     static defaultProps = {
         allowMultipleOpen: false
@@ -38,6 +38,9 @@ class Accordion extends Component {
                 openSections: { [label]: !isOpen }
 			})
 		}
+	}
+	closeAllSections = () => {
+		this.setState({ openSections: {} })
 	}
     render() {
         const {
